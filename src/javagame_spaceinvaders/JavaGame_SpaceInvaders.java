@@ -94,9 +94,9 @@ public class JavaGame_SpaceInvaders extends Applet implements Runnable{
 		graph.fillRect(656, 560 - 5 * player.getAmmo(), 30, 5 * player.getAmmo());
 		
 		
-                eShipList.forEach((enemyShip) -> {
-                    enemyShip.render(graph);
-                    });
+                for (EnemyShip enemyShip : eShipList) {
+			enemyShip.render(graph);
+		}
 		for(int i=0;i<eMissileList.size();i++){
 			eMissileList.get(i).render(graph);
 		}
